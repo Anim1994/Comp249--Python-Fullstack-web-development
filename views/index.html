@@ -1,0 +1,93 @@
+% rebase('base.html')
+
+<body>
+<p>{{message}}</p>
+
+    % if usernick == None:
+        <form method ="POST" action="/login" id="loginform">
+        <label for = "nick"></label>
+        <input type="text" placeholder="username" name="nick"/>
+        <label for = "password"></label>
+        <input type="password" placeholder="password" name="password"/>
+        <input type="submit" value="Login"/>
+        </form>
+    %end
+
+    % if usernick != None:
+        <p>Logged in as {{usernick}}</p>
+        <form method ="POST" action="/logout" id="logoutform">
+            <input type="submit" name ="logout" value="Logout"/>
+        </form>
+
+        <form method ="POST" action="/post" id="postform">
+            <br>
+            Title:
+            <label for = 'title'></label>
+            <input type = "text" name = "title"/>
+            <br>
+            Company:
+            <label for = 'company'></label>
+            <input type = "text" name = "company"/>
+            <br>
+            Location:
+            <label for = 'location'></label>
+            <input type = "text" name = "location"/>
+            <br>
+            Job description:
+            <label for = 'description' name = "description"></label>
+            <input type = 'text' name = 'description'>
+            <br>
+            <input type="submit" name ="submit" value="Submit"/>
+        </form>
+    %end
+
+
+<div class="about">
+<p><a href="/about"> About </a></p>
+</div>
+
+<ul>
+    <li><a href="/static/assignment.html">Assignment Spec</a></li>
+</ul>
+
+<ul>
+    % for index, position in enumerate(positions):
+        % for row in list(position):
+            <li>{{!row}}</li>
+        %end
+
+        % if (index == 0):
+            <p><a href="/positions/01">Read More</a></p>
+        %end
+        % if (index == 1):
+            <p><a href="/positions/02">Read More</a></p>
+        %end
+        % if (index == 2):
+            <p><a href="/positions/03">Read More</a></p>
+        %end
+        % if (index == 3):
+            <p><a href="/positions/04">Read More</a></p>
+        %end
+        % if (index == 4):
+            <p><a href="/positions/05">Read More</a></p>
+        %end
+        % if (index == 5):
+            <p><a href="/positions/06">Read More</a></p>
+        %end
+        % if (index == 6):
+            <p><a href="/positions/07">Read More</a></p>
+        %end
+        % if (index == 7):
+            <p><a href="/positions/08">Read More</a></p>
+        %end
+        % if (index == 8):
+            <p><a href="/positions/09">Read More</a></p>
+        %end
+        % if (index == 9):
+            <p><a href="/positions/10">Read More</a></p>
+        %end
+    % end
+</ul>
+
+
+</body>

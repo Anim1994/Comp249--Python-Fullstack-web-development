@@ -1,0 +1,20 @@
+html {
+    background-color: white;
+    color: #010101;
+    font-family: Times New Roman;
+	font-size: 21px;
+}
+
+.about{
+	text-align: center;
+	color: #056279;
+	font-family: Luminari, fantasy;
+	height: 150px;
+	background-color: white;
+	margin-left: -9px;
+	margin-right: -9px;
+	margin-top: -27px;
+	margin-bottom: -40px;
+	font-weight: bold;
+
+}
